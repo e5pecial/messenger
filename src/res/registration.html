@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/sendToServer.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<title>Регистрация</title>
+</head>
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<a class="navbar-brand" href="index.html"> SIMPLE CHAT</a>
+</header>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+				<fieldset>
+					<div id="legend">
+						<legend class="">Register</legend>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="username">Username</label>
+						<div class="controls">
+							<input id="username" name="username" placeholder="" class="form-control input-lg" type="text" value="">
+							<p class="help-block">Username can contain any letters or numbers, without spaces</p>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="password">Password</label>
+						<div class="controls">
+							<input id="password" name="password" placeholder="" class="form-control input-lg" type="password" value="">
+							<p class="help-block">Password should be at least 6 characters</p>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<div class="controls">
+							<button class="btn btn-success" onclick="registration(); ">Register</button>
+						</div>
+					</div>
+				</fieldset>
+		</div>
+	</div>
+</div>
+</html>

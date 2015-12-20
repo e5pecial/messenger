@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/sendToServer.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Users</title>
+</head>
+${header}
+<body>
+<table id="tab1" class="table table-responsive">
+    <thead>
+    <tr>
+        <th>User name</th>
+        <th>Choose</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+    <#list list as u >
+        <tr>
+            <td>${u.getUserName()}</td>
+            <td> <input type="button" class="btn btn-success" value="Talk!" onclick="startTalk('${u.getUserName()}')"></td>
+        </tr>
+    </#list>
+</table>
+
+</body>
+
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/sendToServer.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Чат</title>
+</head>
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <a class="navbar-brand" href="index.html"> SIMPLE CHAT</a>
+    <div class="navbar-btn">
+
+        <div class="container">
+            <nav>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active" ><button class="btn btn-primary" onclick="blockChat();"> Chat</button></li>
+                    <!--<li role="presentation" class="active"><button class="btn btn-primary" onclick="blockProfile();">Profile</button></li>-->
+                    <li role="presentation" class="active"><button class="btn btn-primary" onclick="blockUsers();">Users</button></li>
+                    <li role="presentation" class="active navbar-right"><button id="enter" class="btn btn-success"
+                                                                                onclick="authExit();">Sign out</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<table id="tab1" class="table table-responsive">
+    <thead>
+    <tr>
+        <th>Messages</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+        <tr>
+            <td>user
+PRIVET Fri Dec 18 09:18:19 YEKT 2015</td>
+        </tr>
+        <tr>
+            <td>admin
+qq Fri Dec 18 09:18:57 YEKT 2015</td>
+        </tr>
+</table>
+<div class="container">
+    <form id="do-chat">
+        <table id="response" class="table table-bordered"></table>
+        <fieldset>
+            <legend>Enter your message...</legend>
+            <div class="controls">
+                <input type="text" class="input-group" placeholder="Your message..."
+                       id="message" style="height:40px" size="70"/>
+                <input type="submit" class="btn btn-large btn-primary"
+                       value="Send message" onclick="sendMessage();"/>
+                <button class="btn btn-large btn-danger" type="button"
+                        onclick="leaveTalk();" id="leave-room">Leave talk</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</html>

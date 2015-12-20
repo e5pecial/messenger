@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/sendToServer.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Авторизация</title>
+</head>
+<header class="navbar navbar-fixed-top navbar-inverse ">
+    <a class="navbar-brand" href="index.html"> SIMPLE CHAT</a>
+
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+                    <div id="legend">
+                        <legend class="">Please, login to view this content</legend>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input id="username" name="username" placeholder="" class="form-control input-lg" type="text">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <input id="password" name="password" placeholder="" class="form-control input-lg" type="password">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-primary" onclick="auth();">Sign in</button>
+                        </div>
+                    </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 text-center">
+    <h4> Haven't account? Sign up now!</h4>
+    <button class="btn btn-lg btn-success" onclick="document.location.href=('http://localhost:3000/registration.html')">Sign up</button>
+</div>
+</html>

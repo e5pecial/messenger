@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/sendToServer.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Чат</title>
+</head>
+${header}
+<table id="tab1" class="table table-responsive">
+    <thead>
+    <tr>
+        <th>Messages</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+    <#list list as l>
+        <tr>
+            <td>${l.getHistoryMessage()}</td>
+        </tr>
+    </#list>
+</table>
+<div class="container">
+    <form id="do-chat">
+        <table id="response" class="table table-bordered"></table>
+        <fieldset>
+            <legend>Enter your message...</legend>
+            <div class="controls">
+                <input type="text" class="input-group" placeholder="Your message..."
+                       id="message" style="height:40px" size="70"/>
+                <input type="submit" class="btn btn-large btn-primary"
+                       value="Send message" onclick="sendMessage();"/>
+                <button class="btn btn-large btn-danger" type="button"
+                        onclick="leaveTalk();" id="leave-room">Leave talk</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</html>

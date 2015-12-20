@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/sendToServer.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Users</title>
+</head>
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <a class="navbar-brand" href="index.html"> SIMPLE CHAT</a>
+    <div class="navbar-btn">
+
+        <div class="container">
+            <nav>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active" ><button class="btn btn-primary" onclick="blockChat();"> Chat</button></li>
+                    <!--<li role="presentation" class="active"><button class="btn btn-primary" onclick="blockProfile();">Profile</button></li>-->
+                    <li role="presentation" class="active"><button class="btn btn-primary" onclick="blockUsers();">Users</button></li>
+                    <li role="presentation" class="active navbar-right"><button id="enter" class="btn btn-success"
+                                                                                onclick="authExit();">Sign out</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+<table id="tab1" class="table table-responsive">
+    <thead>
+    <tr>
+        <th>User name</th>
+        <th>Choose</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+        <tr>
+            <td>admin</td>
+            <td> <input type="button" class="btn btn-success" value="Talk!" onclick="startTalk('admin')"></td>
+        </tr>
+        <tr>
+            <td>user</td>
+            <td> <input type="button" class="btn btn-success" value="Talk!" onclick="startTalk('user')"></td>
+        </tr>
+</table>
+
+</body>
+
+</html>
+
