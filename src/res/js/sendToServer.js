@@ -19,7 +19,7 @@ function handler()
             setCookie("username", username, 1);
             setCookie("password", password, 1);
 
-            d.location.href = 'http://localhost:3000/users.html';
+            d.location.pathname = "/users.html";
         }
         else if (this.status != 200)
         {
@@ -90,13 +90,13 @@ function leaveTalk()
 {
     deleteCookie("userto");
 
-    d.location.href = "http://localhost:3000/users.html";
+    d.location.pathname = "/users.html";
 }
 
 function startTalk(userName)
 {
     setCookie("userto", userName, 1);
-    d.location.href = "http://localhost:3000/chat.html";
+    d.location.pathname = "/chat.html";
 }
 
 function setCookie(name, value, time)
@@ -140,38 +140,38 @@ function getCookie(_name)
 
 function blockChat() {
     if (document.cookie == "") {
-        d.location.href = "http://localhost:3000/auth.html";
+        d.location.pathname = "/auth.html";
     }
     else
     {
-        d.location.href = "http://localhost:3000/chat.html";
+        d.location.pathname = "/chat.html";
     }
 }
 
 function blockProfile() {
     if (document.cookie == "") {
-        d.location.href = "http://localhost:3000/auth.html";
+        d.location.pathname = "/auth.html";
     }
     else
     {
-        d.location.href = "http://localhost:3000/profile.html";
+        d.location.pathname = "/profile.html";
     }
 }
 
 function authExit() {
     deleteCookie("username");
     deleteCookie("password");
-    d.location.href = "http://localhost:3000/index.html"
+    d.location.pathname = "/index.html"
 
 }
 
 function blockUsers(){
     if (document.cookie == "") {
-        d.location.href = "http://localhost:3000/auth.html";
+        d.location.pathname = "/auth.html";
     }
     else
     {
-        d.location.href = "http://localhost:3000/users.html";
+        d.location.pathname = "/users.html";
     }
 
 }
